@@ -19,7 +19,7 @@ const LocatorFetcher = () => {
     setError("");
     setLoading(true); // Set loading to true when request starts
     try {
-      const response = await axios.get(`http://localhost:8090/fetch-locators`, {
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/fetch-locators`, {
         params: { url },
       });
       
